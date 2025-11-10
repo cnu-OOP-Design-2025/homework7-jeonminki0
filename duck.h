@@ -14,13 +14,14 @@ public:
 // 전략 구현 클래스들
 class FlyWithWings : public FlyBehavior {
 public:
-    void fly() override {
-        cout << "I can Fly!" << endl;
-    }
+    void fly() override;
+    virtual ~FlyWithWings() {}
 };
 
 class FlyNoWay : public FlyBehavior {
-    /* TODO */
+public:
+    void fly() override;
+    virtual ~FlyNoWay(){}
 };
 
 //---------------------------------------------------
@@ -33,18 +34,21 @@ public:
 
 // 전략 구현 클래스들
 class Quack : public QuackBehavior {
-    /* TODO */
+public:
+    void quack() override;
+    virtual ~Quack(){}
 };
 
-class Squeak: public QuackBehavior {
+class Squeak : public QuackBehavior {
 public:
-    void quack() override {
-        cout << "Squeak!" << endl;
-    }
+    void quack() override;
+    virtual ~Squeak() {}
 };
 
 class MuteQuack : public QuackBehavior {
-    /* TODO */
+public:
+    void quack() override;
+    virtual ~MuteQuack(){}
 };
 
 // 오리 클래스
